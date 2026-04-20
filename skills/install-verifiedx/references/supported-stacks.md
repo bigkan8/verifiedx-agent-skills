@@ -2,6 +2,32 @@
 
 Use only the recipe that matches `recommended.kind` from `verifiedx verify --json`.
 
+## Official VerifiedX URLs
+
+- Product and API keys: `https://verifiedx.me`
+- Docs home: `https://docs.verifiedx.me`
+- Python SDK: `https://docs.verifiedx.me/sdks/python`
+- TypeScript SDK: `https://docs.verifiedx.me/sdks/typescript`
+- OpenAI Agents SDK: `https://docs.verifiedx.me/sdks/openai-agents-sdk`
+- Claude Agent SDK: `https://docs.verifiedx.me/sdks/claude-agent-sdk`
+- Vercel AI SDK: `https://docs.verifiedx.me/sdks/vercel-ai`
+- LangGraph: `https://docs.verifiedx.me/sdks/langgraph`
+- OpenAI direct: `https://docs.verifiedx.me/sdks/openai`
+- Anthropic / Claude direct: `https://docs.verifiedx.me/sdks/anthropic`
+- MCP Python: `https://docs.verifiedx.me/sdks/mcp-python`
+- MCP TypeScript: `https://docs.verifiedx.me/sdks/mcp-typescript`
+
+If you are stuck, go to `docs.verifiedx.me` and read only the page that matches the seam the repo actually uses.
+
+## Raw runtimes for custom harnesses
+
+Use the raw SDK pages when the repo owns a custom harness and no native adapter already owns the tool loop.
+
+- Python SDK: `init_verifiedx()`, `install_runtime()`, `bind_harness()`
+- TypeScript SDK: `initVerifiedX()`, `bindHarness()`
+
+These pages also explain the lower-seam capture that is already turned on by default and when to promote business methods into explicit `llm`, `retrievals`, `actions`, `memories`, or `tools`.
+
 ## Adapter seams
 
 ### TypeScript
@@ -26,6 +52,11 @@ Use only the recipe that matches `recommended.kind` from `verifiedx verify --jso
 
 - `lower_seam_ts`: startup `initVerifiedX()` from `@verifiedx-core/sdk`, keeping lower-seam fallbacks enabled
 - `lower_seam_py`: startup `init_verifiedx()` plus `install_runtime()` from `verifiedx`
+
+Docs make these paths explicit:
+
+- TypeScript lower seams already cover `fetch`, file writes, `pg`, and `amqplib`
+- Python lower seams already cover file writes, `aiofiles`, `urllib`, `requests`, `httpx`, `OpenAI`, `Anthropic`, `LiteLLM`, `botocore`, `sqlite3`, `psycopg`, `psycopg2`, `SQLAlchemy`, `kombu`, and Playwright
 
 ## Explicit wrappers
 

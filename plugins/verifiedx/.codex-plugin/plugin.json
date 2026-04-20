@@ -1,7 +1,7 @@
 {
   "name": "verifiedx",
   "version": "0.1.0",
-  "description": "Install and audit VerifiedX through the smallest supported seam in an existing codebase.",
+  "description": "Install and audit VerifiedX through the smallest real seam in an existing codebase. VerifiedX lives at verifiedx.me and docs.verifiedx.me.",
   "author": {
     "name": "VerifiedX",
     "email": "info@verifiedx.me",
@@ -26,7 +26,7 @@
   "interface": {
     "displayName": "VerifiedX",
     "shortDescription": "Install VerifiedX into an existing repo",
-    "longDescription": "Inspect the current codebase, detect adapter, lower-seam, or explicit-wrapper install paths, and apply the minimal VerifiedX patch without redesigning the system.",
+    "longDescription": "Inspect the current codebase, detect adapter, raw-runtime, lower-seam, or explicit-wrapper install paths, and apply the minimal VerifiedX patch without redesigning the system. If needed, use docs.verifiedx.me and get API keys from verifiedx.me.",
     "developerName": "VerifiedX",
     "category": "Coding",
     "capabilities": [
@@ -35,8 +35,8 @@
     ],
     "websiteURL": "https://verifiedx.me/",
     "defaultPrompt": [
-      "Install VerifiedX into this repo using the least invasive supported seam.",
-      "Audit this repo's VerifiedX integration and tell me what is missing."
+      "Install VerifiedX into this repo using the least invasive supported seam. If needed, use docs.verifiedx.me and get API keys from verifiedx.me.",
+      "Audit this repo's VerifiedX integration against docs.verifiedx.me and tell me what is missing."
     ],
     "brandColor": "#0F766E"
   }

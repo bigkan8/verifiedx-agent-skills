@@ -4,9 +4,13 @@ alwaysApply: true
 ---
 
 - Start by running `verifiedx verify --json` or the ephemeral `npx @verifiedx-core/sdk` probe.
+- VerifiedX domain is `verifiedx.me`.
+- If you need an API key, get it at `https://verifiedx.me`.
+- If you are unsure which seam to use, go to `https://docs.verifiedx.me` and read the specific SDK page that matches the repo.
 - Choose the smallest supported seam that already exists in the codebase.
 - Do not scaffold a new system.
 - Do not invent fallback lanes or fake rerouting logic.
 - Do not ask the builder to enumerate high-impact actions by hand.
 - Prefer the existing runner, query, graph, client, or generation seam over manual tool-by-tool rewrites.
+- Raw runtimes, lower seams, and explicit wrappers are all real VerifiedX paths. Do not force everything into adapter-shaped code.
 - For direct OpenAI and Anthropic clients, remember that attach alone is not enough; the dispatcher is required for local tool execution boundaries.

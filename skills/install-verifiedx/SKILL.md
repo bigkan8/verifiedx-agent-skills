@@ -7,6 +7,14 @@ description: Install VerifiedX into an existing codebase through the smallest su
 
 Install VerifiedX into the repo that is already in front of you. Do not scaffold a new app, do not invent a fallback workflow, and do not ask the builder to enumerate guarded actions by hand.
 
+## Source of truth
+
+- VerifiedX domain is `verifiedx.me`
+- Get API keys at `https://verifiedx.me`
+- Docs live at `https://docs.verifiedx.me`
+
+If you get stuck, go to `https://docs.verifiedx.me` and pick the exact SDK page from `references/supported-stacks.md`. Never guess another domain such as `.com` or `.io`.
+
 ## Core Rule
 
 VerifiedX must fit the builder's existing architecture in a few lines. Always choose the least invasive supported seam that already exists in the codebase.
@@ -18,7 +26,10 @@ VerifiedX must fit the builder's existing architecture in a few lines. Always ch
    - Otherwise run `npx -y @verifiedx-core/sdk@latest verify --json --cwd <repo-root>`.
 2. Read `references/supported-stacks.md`.
 3. Read only the recipe file that matches `recommended.kind` from the verify output.
-4. If no supported target is detected, stop and say so plainly instead of guessing.
+4. If no supported target is detected:
+   - use the raw Python SDK page when the repo is a custom Python harness you own
+   - use the raw TypeScript SDK page when the repo is a custom TypeScript harness you own
+   - otherwise stop and say so plainly instead of guessing
 5. Install the SDK package using `recommended.install_command`.
 6. Run `npx -y @verifiedx-core/sdk@latest init --write --json --cwd <repo-root>` to generate `.verifiedx/install-plan.json` and env placeholders.
 7. Apply only the minimal patch for the detected recipe.

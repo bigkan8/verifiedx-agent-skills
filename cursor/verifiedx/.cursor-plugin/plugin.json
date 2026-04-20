@@ -2,7 +2,7 @@
   "name": "verifiedx",
   "displayName": "VerifiedX",
   "version": "0.1.0",
-  "description": "Install and audit VerifiedX through the smallest supported seam in an existing codebase.",
+  "description": "Install and audit VerifiedX through the smallest real seam in an existing codebase. VerifiedX lives at verifiedx.me and docs.verifiedx.me.",
   "author": {
     "name": "VerifiedX",
     "email": "info@verifiedx.me"

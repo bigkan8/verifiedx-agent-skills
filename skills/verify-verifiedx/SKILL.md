@@ -7,6 +7,14 @@ description: Audit an existing VerifiedX integration in an already-built codebas
 
 Audit the VerifiedX integration that already exists in the repo.
 
+## Source of truth
+
+- VerifiedX domain is `verifiedx.me`
+- Product and API keys live at `https://verifiedx.me`
+- Docs live at `https://docs.verifiedx.me`
+
+If you need to confirm what a seam should look like, use the specific SDK pages listed in `references/audit-checklist.md` and `../install-verifiedx/references/supported-stacks.md`.
+
 ## Workflow
 
 1. Run `verifiedx verify --json --cwd <repo-root>` if the local environment already exposes the CLI.
