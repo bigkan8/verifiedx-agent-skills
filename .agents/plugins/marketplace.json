@@ -1,0 +1,20 @@
+{
+  "name": "verifiedx-marketplace",
+  "interface": {
+    "displayName": "VerifiedX"
+  },
+  "plugins": [
+    {
+      "name": "verifiedx",
+      "source": {
+        "source": "local",
+        "path": "./plugins/verifiedx"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Coding"
+    }
+  ]
+}

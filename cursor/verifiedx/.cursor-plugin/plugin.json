@@ -1,0 +1,33 @@
+{
+  "name": "verifiedx",
+  "displayName": "VerifiedX",
+  "version": "0.1.0",
+  "description": "Install and audit VerifiedX through the smallest supported seam in an existing codebase.",
+  "author": {
+    "name": "VerifiedX",
+    "email": "info@verifiedx.me"
+  },
+  "publisher": "VerifiedX",
+  "homepage": "https://verifiedx.me/",
+  "repository": "https://github.com/bigkan8/verifiedx-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "verifiedx",
+    "agent-security",
+    "guardrails",
+    "installation",
+    "openai-agents",
+    "langgraph",
+    "claude-agent-sdk",
+    "mcp",
+    "zero-touch"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "security",
+    "agents",
+    "integration"
+  ],
+  "skills": "./skills/",
+  "rules": "./rules/"
+}

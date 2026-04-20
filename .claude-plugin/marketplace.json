@@ -1,0 +1,24 @@
+{
+  "name": "verifiedx-agent-skills",
+  "owner": {
+    "name": "VerifiedX"
+  },
+  "plugins": [
+    {
+      "name": "verifiedx",
+      "source": "./claude/verifiedx",
+      "description": "Install and audit VerifiedX through the smallest supported seam in an existing codebase.",
+      "version": "0.1.0",
+      "keywords": [
+        "verifiedx",
+        "agent-security",
+        "guardrails",
+        "installation",
+        "openai-agents",
+        "langgraph",
+        "claude-agent-sdk"
+      ],
+      "category": "development"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Install VerifiedX"
+  short_description: "Add VerifiedX through the smallest supported seam"
+  default_prompt: "Use $install-verifiedx to inspect this repo, choose the least invasive VerifiedX seam, and install it without redesigning the system."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify VerifiedX"
+  short_description: "Audit an existing VerifiedX integration"
+  default_prompt: "Use $verify-verifiedx to inspect this repo and tell me whether VerifiedX is installed through the right seam and what is missing."

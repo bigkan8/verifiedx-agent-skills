@@ -1,0 +1,43 @@
+{
+  "name": "verifiedx",
+  "version": "0.1.0",
+  "description": "Install and audit VerifiedX through the smallest supported seam in an existing codebase.",
+  "author": {
+    "name": "VerifiedX",
+    "email": "info@verifiedx.me",
+    "url": "https://verifiedx.me/"
+  },
+  "homepage": "https://verifiedx.me/",
+  "repository": "https://github.com/bigkan8/verifiedx-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "verifiedx",
+    "agent-security",
+    "guardrails",
+    "installation",
+    "openai-agents",
+    "langgraph",
+    "claude-agent-sdk",
+    "vercel-ai",
+    "mcp",
+    "zero-touch"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "VerifiedX",
+    "shortDescription": "Install VerifiedX into an existing repo",
+    "longDescription": "Inspect the current codebase, detect adapter, lower-seam, or explicit-wrapper install paths, and apply the minimal VerifiedX patch without redesigning the system.",
+    "developerName": "VerifiedX",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://verifiedx.me/",
+    "defaultPrompt": [
+      "Install VerifiedX into this repo using the least invasive supported seam.",
+      "Audit this repo's VerifiedX integration and tell me what is missing."
+    ],
+    "brandColor": "#0F766E"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "verifiedx-agent-skills",
+  "owner": {
+    "name": "VerifiedX",
+    "email": "info@verifiedx.me"
+  },
+  "metadata": {
+    "description": "VerifiedX install and audit skills for existing production codebases."
+  },
+  "plugins": [
+    {
+      "name": "verifiedx",
+      "source": "cursor/verifiedx",
+      "description": "Install and audit VerifiedX through the smallest supported seam in an existing codebase."
+    }
+  ]
+}

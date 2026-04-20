@@ -1,0 +1,12 @@
+---
+description: Keep VerifiedX integrations minimal and faithful to the existing codebase.
+alwaysApply: true
+---
+
+- Start by running `verifiedx verify --json` or the ephemeral `npx @verifiedx-core/sdk` probe.
+- Choose the smallest supported seam that already exists in the codebase.
+- Do not scaffold a new system.
+- Do not invent fallback lanes or fake rerouting logic.
+- Do not ask the builder to enumerate high-impact actions by hand.
+- Prefer the existing runner, query, graph, client, or generation seam over manual tool-by-tool rewrites.
+- For direct OpenAI and Anthropic clients, remember that attach alone is not enough; the dispatcher is required for local tool execution boundaries.
