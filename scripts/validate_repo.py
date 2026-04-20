@@ -69,6 +69,8 @@ def main() -> int:
     _require(cursor_manifest.get("name") == "verifiedx", "Cursor plugin name must be `verifiedx`.")
     _require(cursor_manifest.get("skills") == "./skills/", "Cursor plugin skills path must be ./skills/.")
     _require(cursor_manifest.get("rules") == "./rules/", "Cursor plugin rules path must be ./rules/.")
+    _require(cursor_manifest.get("logo") == "assets/logo.svg", "Cursor plugin logo must be assets/logo.svg.")
+    _require((ROOT / "cursor/verifiedx/assets/logo.svg").exists(), "Missing Cursor plugin logo asset.")
 
     _validate_skill("plugins/verifiedx/skills/install-verifiedx/SKILL.md")
     _validate_skill("plugins/verifiedx/skills/verify-verifiedx/SKILL.md")

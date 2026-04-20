@@ -11,6 +11,7 @@
   "homepage": "https://verifiedx.me/",
   "repository": "https://github.com/bigkan8/verifiedx-agent-skills",
   "license": "Apache-2.0",
+  "logo": "assets/logo.svg",
   "keywords": [
     "verifiedx",
     "agent-security",
