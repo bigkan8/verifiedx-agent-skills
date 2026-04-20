@@ -30,6 +30,11 @@ def _validate_skill(relative_path: str) -> None:
     _require(text.startswith("---\n"), f"Skill frontmatter missing in {relative_path}")
     _require("\nname:" in text, f"Skill name missing in {relative_path}")
     _require("\ndescription:" in text, f"Skill description missing in {relative_path}")
+    _require("../../../../skills/" not in text, f"Skill must be self-contained inside plugin cache: {relative_path}")
+    _require(
+        "Read and follow the canonical skill at" not in text,
+        f"Skill must contain full instructions, not an external redirect: {relative_path}",
+    )
 
 
 def _require_file(relative_path: str) -> None:
@@ -42,6 +47,20 @@ def _validate_marketplace(relative_path: str, sources: list[str]) -> None:
     _require(isinstance(plugins, list) and plugins, f"No plugins listed in {relative_path}")
     for source in sources:
         _require((ROOT / source).exists(), f"Marketplace path missing for {relative_path}: {source}")
+
+
+def _validate_plugin_skill_bundle(plugin_root: str) -> None:
+    _validate_skill(f"{plugin_root}/skills/install-verifiedx/SKILL.md")
+    _validate_skill(f"{plugin_root}/skills/verify-verifiedx/SKILL.md")
+    _require_file(f"{plugin_root}/skills/install-verifiedx/references/supported-stacks.md")
+    _require_file(f"{plugin_root}/skills/install-verifiedx/references/lower-seam-ts.md")
+    _require_file(f"{plugin_root}/skills/install-verifiedx/references/lower-seam-py.md")
+    _require_file(f"{plugin_root}/skills/install-verifiedx/references/mcp-ts.md")
+    _require_file(f"{plugin_root}/skills/install-verifiedx/references/mcp-py.md")
+    _require_file(f"{plugin_root}/skills/install-verifiedx/references/manual-explicit.md")
+    _require_file(f"{plugin_root}/skills/install-verifiedx/references/langgraph-openai.md")
+    _require_file(f"{plugin_root}/skills/install-verifiedx/references/langgraph-anthropic.md")
+    _require_file(f"{plugin_root}/skills/verify-verifiedx/references/audit-checklist.md")
 
 
 def main() -> int:
@@ -72,12 +91,9 @@ def main() -> int:
     _require(cursor_manifest.get("logo") == "assets/logo.svg", "Cursor plugin logo must be assets/logo.svg.")
     _require((ROOT / "cursor/verifiedx/assets/logo.svg").exists(), "Missing Cursor plugin logo asset.")
 
-    _validate_skill("plugins/verifiedx/skills/install-verifiedx/SKILL.md")
-    _validate_skill("plugins/verifiedx/skills/verify-verifiedx/SKILL.md")
-    _validate_skill("claude/verifiedx/skills/install-verifiedx/SKILL.md")
-    _validate_skill("claude/verifiedx/skills/verify-verifiedx/SKILL.md")
-    _validate_skill("cursor/verifiedx/skills/install-verifiedx/SKILL.md")
-    _validate_skill("cursor/verifiedx/skills/verify-verifiedx/SKILL.md")
+    _validate_plugin_skill_bundle("plugins/verifiedx")
+    _validate_plugin_skill_bundle("claude/verifiedx")
+    _validate_plugin_skill_bundle("cursor/verifiedx")
     _require((ROOT / "cursor/verifiedx/rules/minimal-integration.mdc").exists(), "Missing Cursor rule file.")
 
     print("validated verifiedx-agent-skills packaging")

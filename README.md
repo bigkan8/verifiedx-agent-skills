@@ -96,13 +96,24 @@ For custom harnesses, the skills repo now also points agents at the raw runtime 
 
 ## Install Surfaces
 
+There are two different distribution paths in this repo:
+
+- `skills.sh` installs the raw `install-verifiedx` and `verify-verifiedx` skills directly into supported coding agents such as Codex, Claude Code, Cursor, and others.
+- plugin marketplaces install a packaged `verifiedx` plugin for Claude Code, Cursor, or Codex.
+
+There is no separate third marketplace submission just for raw skills. The real cross-agent skills path is the `skills` CLI command below.
+
 ### skills.sh / Agent Skills
 
 ```bash
 npx skills add bigkan8/verifiedx-agent-skills
 ```
 
-Then tell the agent: `Install VerifiedX into this repo.`
+This installs the same two self-contained skills into the agents supported by the local `skills` CLI. Then tell the agent:
+
+```text
+Install VerifiedX into this repo.
+```
 
 ### Cursor
 
