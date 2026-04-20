@@ -12,6 +12,10 @@
   - `VERIFIEDX_API_KEY`
   - `VERIFIEDX_AGENT_ID`
   - `VERIFIEDX_SOURCE_SYSTEM`
+- if the repo is raw-runtime or explicit-wrapper driven, compare it against:
+  - `../install-verifiedx/references/raw-typescript-runtime.md`
+  - `../install-verifiedx/references/raw-python-runtime.md`
+  - `../install-verifiedx/references/manual-explicit.md`
 
 ## Direct clients
 
@@ -20,6 +24,10 @@ For `openai_direct_*` and `anthropic_direct_*`, attach alone is not enough. The 
 ## LangGraph
 
 The repo should install or compile through the LangGraph adapter. It should not wrap individual nodes manually to simulate support.
+
+If the repo uses OpenAI-backed LangGraph providers, also compare it against `../install-verifiedx/references/langgraph-openai.md`.
+
+If the repo uses Anthropic-backed LangGraph providers, also compare it against `../install-verifiedx/references/langgraph-anthropic.md`.
 
 ## LangChain Python
 
@@ -50,3 +58,5 @@ MCP integrations should wrap the existing handler or definition:
 - Python: `wrap_tool_handler()` or `wrap_tool_definition()`
 
 Custom explicit wrapper repos should preserve the builder's own harness/tool surface instead of introducing a new orchestration layer.
+
+For Python MCP, boundary protection should live in `wrap_tool_handler()` even if `wrap_tool_definition()` is also used to enrich exposed definitions.

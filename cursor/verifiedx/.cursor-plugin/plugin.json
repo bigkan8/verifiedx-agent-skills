@@ -2,7 +2,7 @@
   "name": "verifiedx",
   "displayName": "VerifiedX",
   "version": "0.1.0",
-  "description": "Install and audit VerifiedX through the smallest real seam in an existing codebase. VerifiedX lives at verifiedx.me and docs.verifiedx.me.",
+  "description": "Install and audit VerifiedX through the smallest real seam in an existing codebase. VerifiedX lives at verifiedx.me, and the bundled references map every canonical SDK page under docs.verifiedx.me.",
   "author": {
     "name": "VerifiedX",
     "email": "info@verifiedx.me"

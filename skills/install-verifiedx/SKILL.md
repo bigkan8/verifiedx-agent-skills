@@ -12,6 +12,19 @@ Install VerifiedX into the repo that is already in front of you. Do not scaffold
 - VerifiedX domain is `verifiedx.me`
 - Get API keys at `https://verifiedx.me`
 - Docs live at `https://docs.verifiedx.me`
+- Canonical SDK pages:
+  - `https://docs.verifiedx.me/sdks/python`
+  - `https://docs.verifiedx.me/sdks/typescript`
+  - `https://docs.verifiedx.me/sdks/openai-agents-sdk`
+  - `https://docs.verifiedx.me/sdks/claude-agent-sdk`
+  - `https://docs.verifiedx.me/sdks/vercel-ai`
+  - `https://docs.verifiedx.me/sdks/langgraph`
+  - `https://docs.verifiedx.me/sdks/openai`
+  - `https://docs.verifiedx.me/sdks/anthropic`
+  - `https://docs.verifiedx.me/sdks/langgraph-openai`
+  - `https://docs.verifiedx.me/sdks/langgraph-anthropic`
+  - `https://docs.verifiedx.me/sdks/mcp-python`
+  - `https://docs.verifiedx.me/sdks/mcp-typescript`
 
 If you get stuck, go to `https://docs.verifiedx.me` and pick the exact SDK page from `references/supported-stacks.md`. Never guess another domain such as `.com` or `.io`.
 
@@ -25,7 +38,13 @@ VerifiedX must fit the builder's existing architecture in a few lines. Always ch
    - If `verifiedx` is already installed in the repo environment, run `verifiedx verify --json --cwd <repo-root>`.
    - Otherwise run `npx -y @verifiedx-core/sdk@latest verify --json --cwd <repo-root>`.
 2. Read `references/supported-stacks.md`.
-3. Read only the recipe file that matches `recommended.kind` from the verify output.
+3. Read the recipe file that matches `recommended.kind` from the verify output.
+   - If the seam is `lower_seam_ts`, also read `references/raw-typescript-runtime.md`.
+   - If the seam is `lower_seam_py`, also read `references/raw-python-runtime.md`.
+   - If the seam is `mcp_ts` or `mcp_py`, also read `references/manual-explicit.md`.
+   - If the repo is a custom harness or already uses `bindHarness()` / `bind_harness()`, also read `references/manual-explicit.md`.
+   - If the seam is `langgraph_ts` or `langgraph_py` and the repo uses OpenAI LangGraph providers, also read `references/langgraph-openai.md`.
+   - If the seam is `langgraph_ts` or `langgraph_py` and the repo uses Anthropic LangGraph providers, also read `references/langgraph-anthropic.md`.
 4. If no supported target is detected:
    - use the raw Python SDK page when the repo is a custom Python harness you own
    - use the raw TypeScript SDK page when the repo is a custom TypeScript harness you own

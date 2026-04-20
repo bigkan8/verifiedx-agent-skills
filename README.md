@@ -41,6 +41,8 @@ If an agent gets stuck, it should use `docs.verifiedx.me` and pick the specific 
 - LangGraph: [https://docs.verifiedx.me/sdks/langgraph](https://docs.verifiedx.me/sdks/langgraph)
 - OpenAI direct: [https://docs.verifiedx.me/sdks/openai](https://docs.verifiedx.me/sdks/openai)
 - Anthropic / Claude direct: [https://docs.verifiedx.me/sdks/anthropic](https://docs.verifiedx.me/sdks/anthropic)
+- LangGraph (OpenAI): [https://docs.verifiedx.me/sdks/langgraph-openai](https://docs.verifiedx.me/sdks/langgraph-openai)
+- LangGraph (Anthropic / Claude): [https://docs.verifiedx.me/sdks/langgraph-anthropic](https://docs.verifiedx.me/sdks/langgraph-anthropic)
 - MCP Python: [https://docs.verifiedx.me/sdks/mcp-python](https://docs.verifiedx.me/sdks/mcp-python)
 - MCP TypeScript: [https://docs.verifiedx.me/sdks/mcp-typescript](https://docs.verifiedx.me/sdks/mcp-typescript)
 
@@ -63,6 +65,11 @@ Use the framework-native adapter when the repo already runs through one:
 - Python Anthropic direct
 - Python OpenAI direct
 
+Provider-specialized LangGraph docs are also covered:
+
+- OpenAI-backed graphs: `langgraph-openai`
+- Anthropic-backed graphs: `langgraph-anthropic`
+
 ### 2. Lower seams
 
 Use the lower-seam runtime install when the repo mainly crosses trust boundaries through transport/runtime surfaces rather than a supported agent adapter:
@@ -78,6 +85,14 @@ Use explicit wrapping when the repo exposes MCP tools or a custom harness and th
 
 - TypeScript `wrapMcpTool()`, `bindHarness()`, `wrapToolCall()`, `wrapMemoryWrite()`, `wrapActionExecute()`
 - Python `wrap_tool_handler()`, `wrap_tool_definition()`, `bind_harness()`, `wrap_tool_call()`, `wrap_memory_write()`, `wrap_action_execute()`
+
+For custom harnesses, the skills repo now also points agents at the raw runtime details the public docs provide:
+
+- lower-seam defaults already captured automatically
+- explicit binding categories `llm`, `retrievals`, `actions`, `memories`, and `tools`
+- schema and docstring metadata
+- composed-system upstream context
+- runtime blocked-result and receipt behavior
 
 ## Install Surfaces
 

@@ -26,7 +26,7 @@
   "interface": {
     "displayName": "VerifiedX",
     "shortDescription": "Install VerifiedX into an existing repo",
-    "longDescription": "Inspect the current codebase, detect adapter, raw-runtime, lower-seam, or explicit-wrapper install paths, and apply the minimal VerifiedX patch without redesigning the system. If needed, use docs.verifiedx.me and get API keys from verifiedx.me.",
+    "longDescription": "Inspect the current codebase, detect adapter, raw-runtime, lower-seam, or explicit-wrapper install paths, and apply the minimal VerifiedX patch without redesigning the system. If needed, use docs.verifiedx.me and the canonical SDK pages listed in the bundled references, and get API keys from verifiedx.me.",
     "developerName": "VerifiedX",
     "category": "Coding",
     "capabilities": [

@@ -7,6 +7,19 @@ alwaysApply: true
 - VerifiedX domain is `verifiedx.me`.
 - If you need an API key, get it at `https://verifiedx.me`.
 - If you are unsure which seam to use, go to `https://docs.verifiedx.me` and read the specific SDK page that matches the repo.
+- The canonical public SDK pages are:
+  - `/sdks/python`
+  - `/sdks/typescript`
+  - `/sdks/openai-agents-sdk`
+  - `/sdks/claude-agent-sdk`
+  - `/sdks/vercel-ai`
+  - `/sdks/langgraph`
+  - `/sdks/openai`
+  - `/sdks/anthropic`
+  - `/sdks/langgraph-openai`
+  - `/sdks/langgraph-anthropic`
+  - `/sdks/mcp-python`
+  - `/sdks/mcp-typescript`
 - Choose the smallest supported seam that already exists in the codebase.
 - Do not scaffold a new system.
 - Do not invent fallback lanes or fake rerouting logic.

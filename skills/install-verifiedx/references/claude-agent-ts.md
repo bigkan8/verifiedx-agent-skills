@@ -2,6 +2,7 @@
 
 - SDK surface: `@verifiedx-core/sdk/claude-agent`
 - Minimal seam: wrap the existing Claude query callable with `withVerifiedXClaudeQuery()`
+- Docs: `https://docs.verifiedx.me/sdks/claude-agent-sdk`
 
 ## Apply
 

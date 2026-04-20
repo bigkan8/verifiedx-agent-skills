@@ -2,6 +2,7 @@
 
 - SDK surface: `attach_openai_agents_agent()`, `attach_openai_agents_runner()`, `run_openai_agents_sync()`, or `run_openai_agents_streamed()` from `verifiedx`
 - Minimal seam: wrap the current runner or agent surface
+- Docs: `https://docs.verifiedx.me/sdks/openai-agents-sdk`
 
 ## Apply
 

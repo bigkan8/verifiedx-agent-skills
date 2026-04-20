@@ -2,6 +2,7 @@
 
 - SDK surface: `@verifiedx-core/sdk/openai-agents`
 - Minimal seam: wrap the existing runner or agent entrypoint
+- Docs: `https://docs.verifiedx.me/sdks/openai-agents-sdk`
 
 ## Apply
 

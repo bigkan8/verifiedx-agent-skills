@@ -12,6 +12,19 @@ Audit the VerifiedX integration that already exists in the repo.
 - VerifiedX domain is `verifiedx.me`
 - Product and API keys live at `https://verifiedx.me`
 - Docs live at `https://docs.verifiedx.me`
+- Canonical SDK pages:
+  - `https://docs.verifiedx.me/sdks/python`
+  - `https://docs.verifiedx.me/sdks/typescript`
+  - `https://docs.verifiedx.me/sdks/openai-agents-sdk`
+  - `https://docs.verifiedx.me/sdks/claude-agent-sdk`
+  - `https://docs.verifiedx.me/sdks/vercel-ai`
+  - `https://docs.verifiedx.me/sdks/langgraph`
+  - `https://docs.verifiedx.me/sdks/openai`
+  - `https://docs.verifiedx.me/sdks/anthropic`
+  - `https://docs.verifiedx.me/sdks/langgraph-openai`
+  - `https://docs.verifiedx.me/sdks/langgraph-anthropic`
+  - `https://docs.verifiedx.me/sdks/mcp-python`
+  - `https://docs.verifiedx.me/sdks/mcp-typescript`
 
 If you need to confirm what a seam should look like, use the specific SDK pages listed in `references/audit-checklist.md` and `../install-verifiedx/references/supported-stacks.md`.
 

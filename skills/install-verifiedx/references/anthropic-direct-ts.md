@@ -2,13 +2,15 @@
 
 - SDK surface: `@verifiedx-core/sdk/anthropic-direct`
 - Minimal seam: `attach()` the Anthropic client and dispatch local tool uses through `createToolDispatcher()`
+- Docs: `https://docs.verifiedx.me/sdks/anthropic`
 
 ## Apply
 
 1. Install `@verifiedx-core/sdk`.
 2. Import `attach` and `createToolDispatcher`.
 3. Wrap the existing Anthropic client with `attach(client, { verifiedx })`.
-4. Replace direct local tool handler execution with the dispatcher.
+4. Replace direct local tool handler execution with the dispatcher inside the existing Claude Messages loop.
+5. Keep the existing assistant message and tool-result message flow intact.
 
 ## Important
 
