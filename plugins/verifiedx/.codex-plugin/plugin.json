@@ -26,7 +26,7 @@
   "interface": {
     "displayName": "VerifiedX",
     "shortDescription": "Install VerifiedX into an existing repo",
-    "longDescription": "Inspect the current codebase, detect adapter, raw-runtime, lower-seam, or explicit-wrapper install paths, and apply the minimal VerifiedX patch without redesigning the system. If needed, use docs.verifiedx.me and the canonical SDK pages listed in the bundled references, and get API keys from verifiedx.me.",
+    "longDescription": "Inspect the current codebase, detect the smallest supported seam, and run the one-shot VerifiedX installer so the repo is patched, configured, and verified at the action boundary without redesigning the system.",
     "developerName": "VerifiedX",
     "category": "Coding",
     "capabilities": [
@@ -35,7 +35,7 @@
     ],
     "websiteURL": "https://verifiedx.me/",
     "defaultPrompt": [
-      "Install VerifiedX into this repo using the least invasive supported seam. If needed, use docs.verifiedx.me and get API keys from verifiedx.me.",
+      "Install VerifiedX into this repo by running `npx -y @verifiedx-core/sdk@latest install --cwd .`. Agentic install is the default. Let the installer drive the coding agent end to end. If it explicitly pauses for manual steering, continue the same agentic flow from `.verifiedx/agentic-runner-prompt.md`, `.verifiedx/agentic-playbook.md`, and `.verifiedx/agentic-review.json`, decide topology as `single` or `multi_agent` from the real codebase, classify repo-owned custom methods from real repo semantics instead of guessing, then finish with `npx -y @verifiedx-core/sdk@latest apply-agentic-review --cwd .`.",
       "Audit this repo's VerifiedX integration against docs.verifiedx.me and tell me what is missing."
     ],
     "brandColor": "#0F766E"

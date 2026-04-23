@@ -1,4 +1,4 @@
 interface:
   display_name: "Install VerifiedX"
   short_description: "Add VerifiedX through the smallest supported seam"
-  default_prompt: "Use $install-verifiedx to inspect this repo, choose the least invasive VerifiedX seam, use docs.verifiedx.me if needed, and install it without redesigning the system."
+default_prompt: "Use $install-verifiedx to run `npx -y @verifiedx-core/sdk@latest install --cwd .`. Agentic install is the default. Let the installer drive the coding agent end to end. If it explicitly pauses for manual steering, continue the same agentic flow from `.verifiedx/agentic-runner-prompt.md`, `.verifiedx/agentic-playbook.md`, and `.verifiedx/agentic-review.json`, decide topology as `single` or `multi_agent` from the real codebase, classify repo-owned custom methods from real repo semantics instead of guessing, then finish with `npx -y @verifiedx-core/sdk@latest apply-agentic-review --cwd .`."
